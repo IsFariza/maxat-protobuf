@@ -1,7 +1,7 @@
 syntax = "proto3";
-package authpb;
+package proto;
 
-option go_package = "github.com/IsFariza/maxat-protobuf/auth-service-pb;authpb";
+option go_package = "github.com/CoffeeSi/social-network-microservices/auth-service/proto;authpb";
 
 // AuthService provides authentication operations for Register and Login users
 service AuthService {

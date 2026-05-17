@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package userpb;
+package user;
 import "google/protobuf/field_mask.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
-option go_package = "github.com/IsFariza/maxat-protobuf/user-service-pb;userpb";
+option go_package = "github.com/CoffeeSi/social-network-microservices/user-service/proto/;userpb";
 
 service UserService{
     rpc CreateUser(CreateUserRequest) returns (User);
@@ -14,6 +14,7 @@ service UserService{
     rpc UpdateUser(UpdateUserRequest) returns (User);
     rpc ChangePassword(ChangePasswordRequest) returns (google.protobuf.Empty);
     rpc GetUserByEmail(GetUserByEmailRequest) returns (UserWithPassword);
+    rpc ChangeStatus(GetUserByEmailRequest) returns (google.protobuf.Empty);
 }
 
 message CreateUserRequest {
